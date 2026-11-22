@@ -2,7 +2,9 @@
 set -e
 cd "$(dirname "$0")"
 APP="图片清理.app"
-swiftc -swift-version 5 -O -target arm64-apple-macos14.0 -parse-as-library main.swift -o PicSweep
+swiftc -swift-version 5 -O -target arm64-apple-macos14.0 -parse-as-library main.swift -o PicSweep-arm64
+swiftc -swift-version 5 -O -target x86_64-apple-macos14.0 -parse-as-library main.swift -o PicSweep-x86_64
+lipo -create PicSweep-arm64 PicSweep-x86_64 -output PicSweep && rm PicSweep-arm64 PicSweep-x86_64
 rm -rf "$APP"; mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources"
 mv PicSweep "$APP/Contents/MacOS/"; cp AppIcon.icns "$APP/Contents/Resources/"
 cat > "$APP/Contents/Info.plist" <<PL

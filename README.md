@@ -13,6 +13,13 @@
 - 支持 iCloud 桌面中的文件
 - 可选包含子文件夹，缩略图大小可调
 
+## 下载
+
+到 [Releases](https://github.com/245678000000/PicSweep/releases) 下载最新的 `PicSweep-x.y.z.zip`，解压后拖入「应用程序」。
+
+> 应用未经 Apple 公证，首次打开请 **右键 → 打开**，或在终端执行：
+> `xattr -cr /Applications/图片清理.app`
+
 ## 构建
 
 需要 macOS 14+ 和 Xcode Command Line Tools：
