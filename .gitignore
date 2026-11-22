@@ -1,0 +1,4 @@
+*.app
+PicSweep
+icon.iconset/
+.DS_Store
